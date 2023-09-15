@@ -1,0 +1,545 @@
+.DAT_Header {
+    background-color: white;
+    width: 100%;
+    height: 58px;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 10px rgb(136, 136, 136, 0.2);
+    &-Menu {
+        width: 52px;
+
+        &-Toggle {
+            border: none;
+            background-color: white;
+            margin-left: 8px;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; //Cursor
+
+            &:hover {
+                background-color: gray;
+                opacity: 40%;
+                transition: 0.3s ease-in-out;
+            }
+
+            &:focus-within {
+                border: solid 4px gray;
+            }
+        }
+    }
+
+    &-Left {
+        width: 192px;
+        height: 34px;
+        margin: 0;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        & a {
+            text-decoration: none;
+            color: black;
+            width: 192px;
+        }
+    }
+
+    &-Center {
+        flex: 4;
+
+        &-Group {
+            border: 0px;
+            position: relative;
+            display: flex;
+
+            &-Searchbar {
+                position: relative;
+                display: flex;
+                background-color: #eef2f8;
+                align-items: center;
+                border-radius: 10px;
+                border: solid 4px rgb(255, 255, 255);
+
+                &-Search {
+                    width: 52px;
+                    height: 44px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                & input {
+                    border: solid 0px white;
+                    outline: none;
+                    background-color: #eef2f8;
+                    width: 188.4px;
+                    height: 44px;
+                    border-radius: 10px;
+                    padding-left: 20px;
+                }
+
+                &:focus-within {
+                    border: solid 4px rgb(66, 100, 255, 0.5);
+                    //transition: 0.4 ease-in-out;
+                }
+            }
+        }
+    }
+
+    &-Right {
+        flex: 6;
+        align-items: center;
+
+        &-Items {
+            gap: 10px;
+            height: 44px;
+            flex-direction: row;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            &-Documentations {
+                width: 127.28px;
+                height: 21.6px;
+                display: flex;
+                text-decoration: none;
+                list-style-type: none;
+
+                &-Title {
+                    border: none;
+                    background-color: white;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer; //Cursor
+                    font-weight: 500;
+                    display: flex;
+                    font-size: 15px;
+                }
+                &-Icon {
+                    border: none;
+                    background-color: white;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer; //Cursor
+
+                    display: flex;
+                    align-items: center;
+                    // &:focus-within {
+                    //     transform: rotate(90degree);
+                    // }
+                }
+            }
+
+            &-Notifications {
+                list-style-type: none;
+
+                &-Icon {
+                    border: none;
+                    background-color: white;
+
+                    border-radius: 50%;
+                    width: 44px;
+                    height: 44px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        background-color: gray;
+                        opacity: 40%;
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    &:focus-within {
+                        border: solid 4px gray;
+                    }
+                }
+            }
+            &-Messages {
+                list-style-type: none;
+                &-Icon {
+                    border: none;
+                    background-color: white;
+
+                    border-radius: 50%;
+                    width: 44px;
+                    height: 44px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        background-color: gray;
+                        opacity: 40%;
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    &:focus-within {
+                        border: solid 4px gray;
+                    }
+                }
+            }
+            &-Users {
+                list-style-type: none;
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+.DAT_Header-Documentsdropdown {
+    // position: relative;
+    display: block;
+    z-index: 9;
+    width: 324.58px;
+    position: fixed;
+    top: 65px;
+    right: 170px;
+    background-color: white;
+    border-radius: 5px;
+
+    &-Item {
+        display: flex;
+        padding: 16px 16px 16px 16px;
+        justify-content: center;
+        align-items: center;
+
+        &-Icon {
+            background-color: #dae7fb;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 24px;
+            border-radius: 50%;
+            color: blue;
+        }
+
+        &-Title {
+            font-size: 14.4px;
+            width: 228.58px;
+            height: 40.5px;
+            font-weight: 500;
+        }
+
+        &-Divider {
+            height: 1px;
+            background-color: gray;
+            opacity: (20%);
+        }
+    }
+}
+
+#Item1 {
+    border-bottom: solid 1px rgb(128, 128, 128, 0.3);
+    &:hover {
+        border-radius: 5px 5px 0px 0px;
+        background-color: #e0e5ec;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+#Item2 {
+    border-bottom: solid 1px rgb(128, 128, 128, 0.3);
+    &:hover {
+        background-color: #e0e5ec;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+#Item3:hover {
+    border-radius: 0px 0px 5px 5px;
+    background-color: #e0e5ec;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.DAT_Header-Notidropdown {
+    width: 296px;
+    // height: 335px;
+    background-color: white;
+    position: fixed;
+    z-index: 9;
+    top: 65px;
+    right: 130px;
+    display: block;
+    border-radius: 7px;
+
+    & h6 {
+        background-color: #0061f2;
+        height: 12px;
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 7px 7px 0px 0px;
+        padding: 16px;
+        gap: 8px;
+    }
+
+    &-Item {
+        display: flex;
+        padding: 16px 16px 16px 16px;
+        // justify-content: center;
+        align-items: center;
+        border-top: solid 1px rgb(128, 128, 128, 0.3);
+        gap: 16px;
+        &-Icon1 {
+            border: none;
+            background-color: #f4a100; //Doi mau
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-Icon2 {
+            border: none;
+            background-color: #00cfd5; //Doi mau
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-Icon3 {
+            border: none;
+            background-color: #e81500; //Doi mau
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-Icon4 {
+            border: none;
+            background-color: #00ac69; //Doi mau
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-Title {
+            width: 208px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14.4px;
+        }
+        &:hover {
+            border-radius: 5px 5px 0px 0px;
+            background-color: #e0e5ec;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+        }
+    }
+
+    &-ViewAll {
+        color: #a7aeb8;
+        display: flex;
+        padding: 12px 16px 12px 16px;
+        justify-content: center;
+        align-items: center;
+        border-top: solid 1px rgb(128, 128, 128, 0.3);
+        font-size: 12.8px;
+        &:hover {
+            border-radius: 5px 5px 0px 0px;
+            background-color: #e0e5ec;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+.DAT_Header-MessageDropdown {
+    width: 296px;
+    // height: 335px;
+    background-color: white;
+    position: fixed;
+    z-index: 9;
+    top: 65px;
+    right: 70px;
+    display: block;
+    border-radius: 7px;
+
+    & h6 {
+        background-color: #0061f2;
+        height: 12px;
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 7px 7px 0px 0px;
+        padding: 16px;
+        gap: 8px;
+    }
+
+    &-Item {
+        display: flex;
+        padding: 16px 16px 16px 16px;
+        // justify-content: center;
+        align-items: center;
+        border-top: solid 1px rgb(128, 128, 128, 0.3);
+        gap: 16px;
+        &-Icon1 {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+
+        &-Icon2 {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+        &-Icon3 {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+
+        &-Icon4 {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+        &-Title {
+            width: 208px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 11.2px;
+            color: #a7aeb8;
+        }
+        &:hover {
+            border-radius: 5px 5px 0px 0px;
+            background-color: #e0e5ec;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+        }
+    }
+
+    &-ViewAll {
+        color: #a7aeb8;
+        display: flex;
+        padding: 12px 16px 12px 16px;
+        justify-content: center;
+        align-items: center;
+        border-top: solid 1px rgb(128, 128, 128, 0.3);
+        font-size: 12.8px;
+        &:hover {
+            border-radius: 5px 5px 0px 0px;
+            background-color: #e0e5ec;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+.DAT_Header-UserDropdown{
+    width: 240px;
+    height: 132px;
+    background-color: white;
+    position: fixed;
+    z-index: 9;
+    top: 65px;
+    right: 20px;
+    display: block;
+    border-radius: 7px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    
+    & h6{
+        display: flex;
+        align-items: center;
+        width: 208px;
+        height: 40px;
+        margin: 8px 16px 8px 16px;
+        & img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 16px;
+        }
+    
+        &-Info{
+            &-Name{
+                font-size: 14.4px;
+            }
+        }
+    }
+
+    &-Divide{
+        height: 0.8px;
+        background-color: 
+        rgb(128, 128, 128, 0.3 );
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    &-Account{
+        display: flex;
+        color: #212832;
+        padding: 4px 16px;
+        gap: 8px;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(128, 128, 128, 0.3);
+        }
+    }
+    &-Logout{
+        display: flex;
+        color: #212832;
+        padding: 4px 16px;
+        gap: 8px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgb(128, 128, 128, 0.3);
+        }
+    }
+}
