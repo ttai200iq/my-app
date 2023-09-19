@@ -13,8 +13,7 @@ export default function Header() {
   // console.log(drop,state)
 
   const handleDropdown = (e) => {
-    var id = e.currentTarget.id; //String
-    //Doc..,No...,Me..,User
+    var id = e.currentTarget.id; 
     if (state) {
       if (drop !== id ) {
         setDrop(id)        

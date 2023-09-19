@@ -7,19 +7,17 @@ export default function Sidebar() {
 
   const handleDrop = (e) => {
     var id = e.currentTarget.id; //-->Hompage(id cua the a)
-    if(state){
-      if(drop !== id){
-        setDrop(id)
+    if (state) {
+      if (drop !== id) {
+        setDrop(id);
       } else {
-        setDrop("Default")
-        setState(false)
+        setDrop("Default");
+        setState(false);
       }
     } else {
-      setDrop(id)
-      setState(true)
+      setDrop(id);
+      setState(true);
     }
-
-
 
     // var get = document.getElementById(id + "_Drop"); // phai lay id cua dropdown Hompage + _Drop
     // var Arr = document.getElementById(id + "_Arrow"); // phai lay id cua arrow Hompage + _Arrow
@@ -37,64 +35,6 @@ export default function Sidebar() {
       <div className="DAT_Sidebar-Function">
         <div className="DAT_Sidebar-Function-Body">
           <div className="DAT_Sidebar-Function-Body-Accordion">
-            {/* Switch case  */}
-            {(() => {
-              switch (drop) {
-                case "Homepage":
-                  return (
-                    <>
-                      {/* Collapse */}
-                      
-                      <div
-                        className="DAT_Sidebar-Function-Body-Accordion-Collapse"
-                        id="Homepage_Drop"
-                      >
-                        <a>Tự động hóa</a>
-                        <a style={{ color: "#0061f2" }}>Năng lượng mặt trời</a>
-                        <a>Thang máy</a>
-                        <a>UPS</a>
-                      </div>
-                    </>
-                  );
-                case "Diary":
-                  return (
-                    <>
-                      <div
-                        className="DAT_Sidebar-Function-Body-Accordion-ListDiary"
-                        id="Diary_Drop"
-                      >
-                        <a>Lịch sử truy cập</a>
-                        <a>Lịch sử cài đặt</a>
-                      </div>
-                    </>
-                  );
-                case "Report":
-                  return (
-                    <>
-                      <div
-                        className="DAT_Sidebar-Function-Body-Accordion-ListReport"
-                        id="Report_Drop"
-                      >
-                        <a>Báo cáo lỗi</a>
-                      </div>
-                    </>
-                  );
-                case "Settings":
-                  return (
-                    <>
-                      <div
-                        className="DAT_Sidebar-Function-Body-Accordion-ListSettings"
-                        id="Settings_Drop"
-                      >
-                        <a>Cấu hình</a>
-                        <a>Đổi mật khẩu</a>
-                        <a>Ngôn ngữ</a>
-                        <a>Thông tin về DAT</a>
-                      </div>
-                    </>
-                  );
-              }
-            })()}
             {/* Trang chủ  */}
             <a
               href="#"
@@ -145,6 +85,20 @@ export default function Sidebar() {
                 </svg>
               </div>
             </a>
+            {drop === "Homepage" ? (
+              <div
+                className="DAT_Sidebar-Function-Body-Accordion-Collapse"
+                id="Homepage_Drop"
+              >
+                <a>Tự động hóa</a>
+                <a style={{ color: "#0061f2" }}>Năng lượng mặt trời</a>
+                <a>Thang máy</a>
+                <a>UPS</a>
+              </div>
+            ) : (
+              <></>
+            )}
+
             {/* Nhật kí */}
             <a
               href="#"
@@ -175,7 +129,7 @@ export default function Sidebar() {
               <label>Nhật kí</label>
               <div
                 className="DAT_Sidebar-Function-Body-Accordion-Homepage-arrow"
-                id="Homepage_Arrow"
+                id="Diary_Arrow"
               >
                 <svg
                   className="svg-inline--fa fa-angle-down"
@@ -197,6 +151,18 @@ export default function Sidebar() {
                 </svg>
               </div>
             </a>
+            {drop === "Diary" ? (
+              <div
+                className="DAT_Sidebar-Function-Body-Accordion-ListDiary"
+                id="Diary_Drop"
+              >
+                <a>Lịch sử truy cập</a>
+                <a>Lịch sử cài đặt</a>
+              </div>
+            ) : (
+              <></>
+            )}
+
             {/* Báo cáo */}
             <a
               href="#"
@@ -227,7 +193,7 @@ export default function Sidebar() {
               <label>Báo cáo</label>
               <div
                 className="DAT_Sidebar-Function-Body-Accordion-Homepage-arrow"
-                id="Homepage_Arrow"
+                id="Report_Arrow"
               >
                 <svg
                   className="svg-inline--fa fa-angle-down"
@@ -249,6 +215,17 @@ export default function Sidebar() {
                 </svg>
               </div>
             </a>
+            {drop === "Report" ? (
+              <div
+                className="DAT_Sidebar-Function-Body-Accordion-ListReport"
+                id="Report_Drop"
+              >
+                <a>Báo cáo lỗi</a>
+              </div>
+            ) : (
+              <></>
+            )}
+
             {/* Cài đặt */}
             <a
               href="#"
@@ -277,7 +254,7 @@ export default function Sidebar() {
               <label>Cài đặt</label>
               <div
                 className="DAT_Sidebar-Function-Body-Accordion-Homepage-arrow"
-                id="Homepage_Arrow"
+                id="Settings_Arrow"
               >
                 <svg
                   className="svg-inline--fa fa-angle-down"
@@ -299,6 +276,19 @@ export default function Sidebar() {
                 </svg>
               </div>
             </a>
+            {drop === "Settings" ? (
+              <div
+                className="DAT_Sidebar-Function-Body-Accordion-ListSettings"
+                id="Settings_Drop"
+              >
+                <a>Cấu hình</a>
+                <a>Đổi mật khẩu</a>
+                <a>Ngôn ngữ</a>
+                <a>Thông tin về DAT</a>
+              </div>
+            ) : (
+              <></>
+            )}
 
             {/* <div className="DAT_Sidebar-Function-Body-Accordion-Diary">
               <svg
