@@ -14,10 +14,10 @@ export default function Content() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-activity"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-activity"
               color="rgba(255, 255, 255, 0.5)"
             >
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
@@ -41,10 +41,10 @@ export default function Content() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-package feather-xl text-primary mb-3"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-package feather-xl text-primary mb-3"
                   color="#0061f2"
                 >
                   <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
@@ -72,10 +72,10 @@ export default function Content() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-book feather-xl text-secondary mb-3"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-book feather-xl text-secondary mb-3"
                   color="#6900c7"
                 >
                   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -102,10 +102,10 @@ export default function Content() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-layout feather-xl text-green mb-3"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-layout feather-xl text-green mb-3"
                 >
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                   <line x1="3" y1="9" x2="21" y2="9"></line>
