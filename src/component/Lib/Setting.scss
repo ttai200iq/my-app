@@ -1,0 +1,133 @@
+.DAT_Setting{
+    &-Table{
+        margin-bottom: 10px;
+        padding: 10px;
+        &-Row1{
+            display: flex;
+            margin-bottom: 10px;
+            gap:5px;
+            & input{
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+            & button{
+                width: 50px;
+            }
+
+        }
+        &-Row2{
+            display: flex;
+            margin-bottom: 10px;
+            gap:5px;
+            & input{
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+            & button{
+                width: 50px;
+            }
+        }
+        &-Row3{
+            display: flex;
+            gap:10px;
+            margin-bottom: 10px;
+            & input{
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+            & button{
+                width: 50px;
+            }
+        }
+        &-Row4{
+            display: flex;
+            gap:10px;
+            margin-bottom: 10px;
+            & select{
+                width: 100%;
+            }
+        }
+        &-Row5{
+            display: flex;
+            gap:10px;
+            margin-bottom: 10px;
+            & input{
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+            & button{
+                width: 50px;
+            }
+        }
+        &-Row6{
+            display: flex;
+            gap:10px;
+            margin-bottom: 10px;
+            & input{
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+            & button{
+                width: 50px;
+            }
+        }
+    }
+}
+
+.DAT_Button{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    &-InvertButton{
+        margin: 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 40px;
+        background-color: rgb(255, 0, 0,0.8);
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 4px 4px 4px 4px rgb(136, 136, 136, 0.2);
+        &:hover{
+            opacity: 85%;
+            transition: 0.2s ease-in-out;
+        }
+    }
+    
+    &-InchingButton{
+        margin: 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 40px;   
+        background-color: rgb(255, 0, 0,0.8);
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 4px 4px 4px 4px rgb(136, 136, 136, 0.2);
+        &:hover{
+            opacity: 85%;
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+.DAT_Bar{
+    
+}

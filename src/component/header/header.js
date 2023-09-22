@@ -1,16 +1,61 @@
-import React, { useState } from "react";
-import "./header.scss";
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-// import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useRef, useEffect } from "react";
+import "./Header.scss";
 import SearchIcon from "@mui/icons-material/Search";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-export default function Header() {
+const data = [
+  {
+    id: 1,
+    name: "Huu Huynh",
+    age:"23",
+    sex:"pede",
+    mail:"huuhuynh@gmail.com"
+  },
+  {
+    id: 2,
+    name: "Tan Tai",
+    age:"23",
+    sex:"Nam tinh",
+    mail:"tantai@gmail.com"
+  },
+  {
+    id: 3,
+    name: "PhuLo",
+    age:"23",
+    sex:"Nu tinh",
+    mail:"phulo@gmail.com"
+  }
+]
+
+export default function Header(props) {
   //reactHook
   const [drop, setDrop] = useState("Default"); //The hien tai
   const [state, setState] = useState(false); //trang thai
+  const search = useRef("");
+  const [info,setInfo] = useState("unknow");
+  const [mail,setMail] = useState("unknow@gmail.com");
   // const [predrop, setPredrop] = useState("Default"); //The truoc do
   // console.log(drop,state)
+
+  useEffect(()=>{
+    // var newdata = data;
+    // newdata = newdata.filter(newdata => newdata.id==2)
+    // console.log(data,newdata)
+    // setInfo(newdata[0].name)
+    // setMail(newdata[0].mail)
+    console.log("header", props.name, props.mail)
+
+  },[props])//dependencies
+  
+  useEffect(()=>{
+    console.log(drop);
+  },[drop])
+
+
+  
+  const handleInput = (e) =>{
+    console.log(search.current.value);
+  }
 
   const handleDropdown = (e) => {
     var id = e.currentTarget.id; 
@@ -117,14 +162,14 @@ export default function Header() {
           </button>
         </div>
         <div className="DAT_Header-Left">
-          <a className="navbar-brand pe-3 ps-4 ps-lg-2" href="index.html">
+          <a href="#" className="navbar-brand pe-3 ps-4 ps-lg-2">
             DAT Group
           </a>
         </div>
         <div className="DAT_Header-Center">
           <div className="DAT_Header-Center-Group">
             <div className="DAT_Header-Center-Group-Searchbar">
-              <input placeholder="Search"></input>
+              <input placeholder="Search"  onChange={(e) => handleInput(e)} ref={search} ></input>
               <div className="DAT_Header-Center-Group-Searchbar-Search">
                 <SearchIcon fontSize="small" color="#69707a" />
               </div>
@@ -199,7 +244,7 @@ export default function Header() {
               </button>
             </li>
             <li className="DAT_Header-Right-Items-Users">
-              <a
+              <a href="#"
                 className="DAT_Headeer-Right-Items-Users-Icon"
                 id="Users"
                 onClick={(e) => {
@@ -230,7 +275,7 @@ export default function Header() {
                   //style={{ display: "none" }}
                 >
                   {/* Item1 */}
-                  <a className="DAT_Header-Documentsdropdown-Item" id="Item1">
+                  <a href="#" className="DAT_Header-Documentsdropdown-Item" id="Item1">
                     <div className="DAT_Header-Documentsdropdown-Item-Icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +304,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* Item2 */}
-                  <a className="DAT_Header-Documentsdropdown-Item" id="Item2">
+                  <a href="#" className="DAT_Header-Documentsdropdown-Item" id="Item2">
                     <div className="DAT_Header-Documentsdropdown-Item-Icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +333,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/*Item3*/}
-                  <a className="DAT_Header-Documentsdropdown-Item" id="Item3">
+                  <a href="#" className="DAT_Header-Documentsdropdown-Item" id="Item3">
                     <div className="DAT_Header-Documentsdropdown-Item-Icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -351,7 +396,7 @@ export default function Header() {
                     Alert Center{" "}
                   </h6>
                   {/* Item1  */}
-                  <a className="DAT_Header-Notidropdown-Item">
+                  <a href="#" className="DAT_Header-Notidropdown-Item">
                     <div className="DAT_Header-Notidropdown-Item-Icon1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -380,7 +425,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* Item2 */}
-                  <a className="DAT_Header-Notidropdown-Item">
+                  <a href="#" className="DAT_Header-Notidropdown-Item">
                     <div className="DAT_Header-Notidropdown-Item-Icon2" id="I1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -412,7 +457,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* Item3  */}
-                  <a className="DAT_Header-Notidropdown-Item">
+                  <a href="#" className="DAT_Header-Notidropdown-Item">
                     <div className="DAT_Header-Notidropdown-Item-Icon3" id="I1">
                       <svg
                         className="svg-inline--fa fa-triangle-exclamation"
@@ -446,7 +491,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* Item4  */}
-                  <a className="DAT_Header-Notidropdown-Item">
+                  <a href="#" className="DAT_Header-Notidropdown-Item">
                     <div className="DAT_Header-Notidropdown-Item-Icon4" id="I1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -479,7 +524,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* ViewAll  */}
-                  <a className="DAT_Header-Notidropdown-ViewAll">
+                  <a href="#" className="DAT_Header-Notidropdown-ViewAll">
                     View All Alert
                   </a>
                 </div>
@@ -512,7 +557,7 @@ export default function Header() {
                     Message Center{" "}
                   </h6>
                   {/* Item1  */}
-                  <a className="DAT_Header-MessageDropdown-Item">
+                  <a href="#" className="DAT_Header-MessageDropdown-Item">
                     <div className="DAT_Header-MessageDropdown-Item-Icon1">
                       <img
                         className="dropdown-notifications-item-img"
@@ -538,7 +583,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* Item2 */}
-                  <a className="DAT_Header-MessageDropdown-Item">
+                  <a href="#" className="DAT_Header-MessageDropdown-Item">
                     <div
                       className="DAT_Header-MessageDropdown-Item-Icon2"
                       id="I1"
@@ -568,7 +613,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* Item3  */}
-                  <a className="DAT_Header-MessageDropdown-Item">
+                  <a href="#" className="DAT_Header-MessageDropdown-Item">
                     <div
                       className="DAT_Header-MessageDropdown-Item-Icon3"
                       id="I1"
@@ -598,7 +643,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* Item4  */}
-                  <a className="DAT_Header-MessageDropdown-Item">
+                  <a href="#" className="DAT_Header-MessageDropdown-Item">
                     <div
                       className="DAT_Header-MessageDropdown-Item-Icon4"
                       id="I1"
@@ -628,7 +673,7 @@ export default function Header() {
                     </div>
                   </a>
                   {/* ViewAll  */}
-                  <a className="DAT_Header-MessageDropdown-ViewAll">
+                  <a href="#" className="DAT_Header-MessageDropdown-ViewAll">
                     View All Alert
                   </a>
                 </div>
@@ -649,15 +694,15 @@ export default function Header() {
                     ></img>
                     <div className="DAT_Header-UserDropdown-Info">
                       <div className="DAT_Header-UserDropdown-Info-Name">
-                        Valerie Luna
+                        {info}
                       </div>
                       <div className="DAT_Header-UserDropdown-Info-Mail">
-                        vluna@aol.com
+                        {mail}
                       </div>
                     </div>
                   </h6>
                   <div className="DAT_Header-UserDropdown-Divide"></div>
-                  <a className="DAT_Header-UserDropdown-Account">
+                  <a href="#" className="DAT_Header-UserDropdown-Account">
                     <div className="DAT_Header-UserDropdown-Account-Icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -678,7 +723,7 @@ export default function Header() {
                     </div>
                     Account
                   </a>
-                  <a className="DAT_Header-UserDropdown-Logout">
+                  <a href="#" className="DAT_Header-UserDropdown-Logout">
                     <div className="DAT_Header-UserDropdown-Logout-Icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
