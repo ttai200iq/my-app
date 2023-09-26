@@ -69,55 +69,7 @@ export default function Header(props) {
     } else {
       setDrop(id);
       setState(true);
-
-
-      // console.log("Hien tai: ",drop,state)
-
     }
-    // console.log(id, state);
-
-
-
-    // var get = document.getElementById(id + '_Drop')
-    // console.log("hello",get)
-    // if(get.style.display==="block"){
-    //   get.style.display="none"
-    // }else{
-    //   get.style.display="block"
-    // }
-
-
-
-
-    //dropdown by usestate+switch case
-    // if (state === true) {
-    //   //true
-    //   if (id === predrop) {
-    //     setState(false);
-    //     setDrop("Default");
-    //     setPredrop("Default");
-    //     console.log("lan3")
-    //   } else {
-    //     setDrop(id);
-    //     setPredrop(id);
-    //     console.log("lan2")
-    //   }
-    // } else {
-    //   //false
-    //   setState(true);
-    //   setDrop(id);
-    //   setPredrop(id);
-    //   console.log("lan1")
-    // }
-
-
-    // dropdown by document
-    // var get = document.getElementById(id + "_Drop");
-    // if (get.style.display === "block") {
-    //   get.style.display = "none";
-    // } else {
-    //   get.style.display = "block";
-    // }
   };
 
   const pushSidebar = (e) => {

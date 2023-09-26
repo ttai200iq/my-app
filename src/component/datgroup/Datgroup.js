@@ -1,17 +1,16 @@
-import React, { useContext, useEffect, useReducer } from "react";
+import React, { useContext } from "react";
 import "./Datgroup.scss";
 import Button from "../Lib/Button";
 import Setting from "../Lib/Setting";
-
-import Bar from "../Lib/Bar";
+import BarChart from "../Lib/BarChart";
 import { EnvContext } from "../context/EnvContext";
 
-
-
 export default function Datgroup() {
-  const { button, envDispatch } = useContext(EnvContext);
-
-
+  const { button, type, bardata, envDispatch } = useContext(EnvContext);
+  const handleChangeLib = (e) => {
+    var temp = e.currentTarget.value;
+    envDispatch({ type: "SET_TYPE", payload: temp });
+  };
 
   return (
     <div className="DATGroup_Content">
@@ -43,6 +42,15 @@ export default function Datgroup() {
           </div>
         </div>
       </div>
+      <div className="DATGroup_Content-SelectLib">
+        <select
+          style={{ margin: "auto !important" }}
+          onChange={(e) => handleChangeLib(e)}
+        >
+          <option value={"Button"}>Button</option>
+          <option value={"Bar"}>Bar</option>
+        </select>
+      </div>
       <div className="DATGroup_Content-Container">
         <div className="DATGroup_Content-Container-Group">
           <div className="DATGroup_Content-Container-Group-ListTag">
@@ -54,9 +62,17 @@ export default function Datgroup() {
                 <div className="DATGroup_Content-Container-Group-ListTag-Tag-Info-Body">
                   <div className="DATGroup_Content-Container-Group-ListTag-Tag-Info-Body-Preview">
                     <div className="DATGroup_Content-Container-Group-ListTag-Tag-Info-Body-Preview-Content">
-                     <Button  setting={button}></Button>
-                     <Bar></Bar>
-                    </div>                
+                      {(() => {
+                        switch (type) {
+                          case "Button":
+                            return <Button setting={button}></Button>;
+                          case "Bar":
+                            return <BarChart setting={bardata}></BarChart>;
+                            default:
+                              <></>
+                        }
+                      })()}
+                    </div>
                     <div className="DATGroup_Content-Container-Group-ListTag-Tag-Info-Body-Preview-Text">
                       {/* vxcx */}
                     </div>
@@ -74,7 +90,7 @@ export default function Datgroup() {
                 <div className="DATGroup_Content-Container-Group-ListTag-Tag-Info-Body">
                   <div className="DATGroup_Content-Container-Group-ListTag-Tag-Info-Body-Preview">
                     <div className="DATGroup_Content-Container-Group-ListTag-Tag-Info-Body-Preview-Content">
-                        <Setting></Setting>
+                      <Setting></Setting>
                     </div>
                     <div className="DATGroup_Content-Container-Group-ListTag-Tag-Info-Body-Preview-Text">
                       {/* vxcx */}

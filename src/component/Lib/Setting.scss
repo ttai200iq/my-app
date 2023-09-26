@@ -1,95 +1,174 @@
-.DAT_Setting{
-    &-Table{
+.DAT_Setting {
+    &-Button {
         margin-bottom: 10px;
         padding: 10px;
-        &-Row1{
+        &-Row1 {
             display: flex;
             margin-bottom: 10px;
-            gap:5px;
-            & input{
+            gap: 5px;
+            & input {
                 width: 100%;
                 box-sizing: border-box;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
+                border-style: none;
+                background-color: #d0f0ff;
+                border-radius: 7px;
             }
-            & button{
+            & button {
                 width: 50px;
+                height: 27px;
+            }
+        }
+        &-Row2 {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 5px;
+            & input {
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border-style: none;
+                background-color: #d0f0ff;
+                border-radius: 7px;
+            }
+            & button {
+                height: 27px;
+                width: 50px;
+            }
+        }
+        &-Row3 {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            & input {
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border-style: none;
+                background-color: #d0f0ff;
+                border-radius: 7px;
+            }
+            & button {
+                height: 27px;
+                width: 50px;
+            }
+        }
+        &-Row4 {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            & select {
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border-style: none;
+                background-color: #d0f0ff;
+                border-radius: 7px;
+            }
+            & input {
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border-style: none;
+                background-color: #d0f0ff;
+                border-radius: 7px;
             }
 
+            & select {
+                width: 100%;
+                height: 27px;
+            }
+            & button {
+                height: 27px;
+                width: 50px;
+            }
         }
-        &-Row2{
+        &-Row5 {
             display: flex;
+            gap: 10px;
             margin-bottom: 10px;
-            gap:5px;
-            & input{
+            & input {
                 width: 100%;
                 box-sizing: border-box;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
+                border-style: none;
+                background-color: #d0f0ff;
+                border-radius: 7px;
             }
-            & button{
+            & button {
+                height: 27px;
                 width: 50px;
             }
         }
-        &-Row3{
+        &-Row6 {
             display: flex;
-            gap:10px;
+            gap: 10px;
             margin-bottom: 10px;
-            & input{
+            & input {
                 width: 100%;
                 box-sizing: border-box;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
-            }
-            & button{
-                width: 50px;
+                border-style: none;
+                background-color: #d0f0ff;
+                border-radius: 7px;
+                height: 27px;
             }
         }
-        &-Row4{
+    }
+    &-Bar {
+        margin-bottom: 10px;
+        padding: 10px;
+        &-Row {
             display: flex;
-            gap:10px;
             margin-bottom: 10px;
+            gap: 5px;
+            height: 27px;
+            & input {
+                width: 100%;
+            }
+            &-BackgroundColor {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap:10px;
+                & input {
+                    width: 27px;
+                }
+            }
+            &-ValueColor {
+                width: 100%;
+                align-items: center;
+                gap:10px;
+                display: flex;
+                & input {
+                    width: 27px;
+                }
+            }
             & select{
                 width: 100%;
             }
-        }
-        &-Row5{
-            display: flex;
-            gap:10px;
-            margin-bottom: 10px;
-            & input{
-                width: 100%;
-                box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-            }
-            & button{
-                width: 50px;
-            }
-        }
-        &-Row6{
-            display: flex;
-            gap:10px;
-            margin-bottom: 10px;
-            & input{
-                width: 100%;
-                box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-            }
-            & button{
-                width: 50px;
+            &-Confirm{
+                width: 100px;
             }
         }
     }
 }
 
-.DAT_Button{
+.DAT_Button {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    &-InvertButton{
+    &-InvertButton {
+        font-size: 20px;
         margin: 20px;
         padding: 10px;
         display: flex;
@@ -97,37 +176,70 @@
         justify-content: center;
         width: 80px;
         height: 40px;
-        background-color: rgb(255, 0, 0,0.8);
+        background-color: rgb(255, 0, 0, 0.8);
         border-radius: 10px;
         font-weight: 500;
         cursor: pointer;
         box-shadow: 4px 4px 4px 4px rgb(136, 136, 136, 0.2);
-        &:hover{
+        &:hover {
             opacity: 85%;
             transition: 0.2s ease-in-out;
         }
     }
-    
-    &-InchingButton{
+
+    &-InchingButton {
+        font-size: 20px;
         margin: 20px;
         padding: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 80px;
-        height: 40px;   
-        background-color: rgb(255, 0, 0,0.8);
+        height: 40px;
+        background-color: rgb(255, 0, 0, 0.8);
         border-radius: 10px;
         font-weight: 500;
         cursor: pointer;
         box-shadow: 4px 4px 4px 4px rgb(136, 136, 136, 0.2);
-        &:hover{
+        &:hover {
             opacity: 85%;
             transition: 0.2s ease-in-out;
         }
     }
 }
 
-.DAT_Bar{
-    
+.DAT_Bar {
+    &-Tank {
+        position: relative;
+        margin: 20px auto;
+        width: 100px;
+        height: 400px;
+        background-color: rgb(128, 128, 128, 0.3);
+        z-index: 1;
+        &-Value {
+            width: 100%;
+            height: 30%;
+            background-color: blue;
+            position: absolute;
+            bottom: 0;
+            & p{
+                position: absolute;
+                margin: -20px 0;
+                right: 0;
+                color: #000;
+                font-weight: 800;
+            }
+        }
+        &-Min {
+            z-index: 2;
+            position: absolute;
+            bottom: 0;
+            color: white;
+        }
+        &-Max {
+            z-index: 2;
+            position: absolute;
+            color: white;
+        }
+    }
 }

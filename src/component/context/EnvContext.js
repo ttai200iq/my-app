@@ -1,7 +1,5 @@
 import { createContext, useReducer } from "react";
 import Reducer, { INITSTATE } from "./EnvReducer";
-import Logger from "../Logger";
-
 
 export const EnvContext = createContext(INITSTATE)
 
@@ -12,6 +10,8 @@ export const EnvContextProvider =({children})=>{
         <EnvContext.Provider value={{
             status:state.status,
             button:state.button,
+            bardata: state.bardata,
+            type: state.type,
             envDispatch
         }}
         >

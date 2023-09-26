@@ -1,16 +1,10 @@
-import React, { useEffect, useReducer, useState, useContext } from "react";
+import React, { useState } from "react";
 import "./Setting.scss";
-
 
 export default function Button(props) {
   const [state, setState] = useState(false);
   const [press, setPress] = useState(false);
 
-
-
-  const handleChangeButtonColor = () => {
-    
-  }
   const handleMouseUp = () => {
     setPress(false);
   };
@@ -23,19 +17,34 @@ export default function Button(props) {
     } else {
       setState(true);
     }
+
+    console.log(props.setting);
   };
+
   return (
     <div className="DAT_Button">
       {/*InvertButton */}
-      { props.setting.btntype === "Invert" ? (
+      {props.setting.btntype === "Invert" ? (
         <div
           className="DAT_Button-InvertButton"
-          style={{ backgroundColor: state === true ? "green" : props.setting.btnbgcoloron }}
+          style={{
+            backgroundColor: state
+              ? String(props.setting.bgon)
+              : String(props.setting.bgoff),
+            fontSize: state
+              ? String(props.setting.sizeon)
+              : String(props.setting.sizeoff),
+            width: String(props.setting.w),
+            height: String(props.setting.h),
+            Color: state
+              ? String(props.setting.txtcoloron)
+              : String(props.setting.txtcoloroff),
+          }}
           onClick={(e) => {
             handleInvert(e);
           }}
         >
-          {state ? "Bật" : "Tắt"}
+          {state ? props.setting.texton : props.setting.textoff}
         </div>
       ) : (
         <div
@@ -43,9 +52,24 @@ export default function Button(props) {
           onMouseUp={handleMouseUp}
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseUp}
-          style={{ backgroundColor: press === true ? "green" : "red" }}
+          style={{
+            backgroundColor:
+              press === true
+                ? String(props.setting.bgon)
+                : String(props.setting.bgoff),
+            fontSize:
+              press === true
+                ? String(props.setting.sizeon)
+                : String(props.setting.sizeoff),
+            color:
+              press === true
+                ? String(props.setting.txtcoloron)
+                : String(props.setting.txtcoloroff),
+            width: String(props.setting.w),
+            height: String(props.setting.h),
+          }}
         >
-          {press ? "Bật" : "Tắt"}
+          {press ? props.setting.texton : props.setting.textoff}
         </div>
       )}
 
